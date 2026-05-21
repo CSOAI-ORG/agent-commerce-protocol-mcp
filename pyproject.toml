@@ -1,0 +1,36 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agent-commerce-protocol-mcp"
+version = "1.0.0"
+description = "Agent Commerce Protocol MCP — bridges Stripe ACP + Google AP2 + Coinbase x402 for agent payments inside ChatGPT, AP2 coalition rails, and pay-per-call x402 flows. By MEOK AI Labs."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Nicholas Templeman", email = "nicholas@meok.ai" }]
+keywords = ["mcp", "mcp-server", "model-context-protocol", "stripe", "acp", "agentic-commerce", "ap2", "x402", "agent-payments", "meok"]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Office/Business :: Financial",
+  "Topic :: Internet :: WWW/HTTP",
+  "Intended Audience :: Developers",
+]
+dependencies = ["mcp[cli]>=1.3.0"]
+
+[project.urls]
+Homepage = "https://meok.ai/a2a"
+Repository = "https://github.com/CSOAI-ORG/agent-commerce-protocol-mcp"
+Documentation = "https://meok.ai/protocols"
+
+[project.scripts]
+agent-commerce-protocol-mcp = "server:main"
+
+[tool.setuptools]
+py-modules = ["server"]

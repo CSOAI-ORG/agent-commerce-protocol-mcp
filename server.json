@@ -1,0 +1,25 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.CSOAI-ORG/agent-commerce-protocol-mcp",
+  "version": "1.0.0",
+  "description": "Agent Commerce Protocol MCP — bridges Stripe ACP + Google AP2 + Coinbase x402 for agent payments. The only MCP that covers all 3 live agent-payment protocols. By MEOK AI Labs.",
+  "repository": {
+    "url": "https://github.com/CSOAI-ORG/agent-commerce-protocol-mcp",
+    "source": "github"
+  },
+  "packages": [
+    {
+      "registryType": "pypi",
+      "identifier": "agent-commerce-protocol-mcp",
+      "version": "1.0.0",
+      "runtimeHint": "python",
+      "transport": { "type": "stdio" }
+    }
+  ],
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://api.meok.ai/v1/a2a/agent-commerce-protocol"
+    }
+  ]
+}
