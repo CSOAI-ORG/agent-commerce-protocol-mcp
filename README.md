@@ -1,111 +1,78 @@
 # Agent Commerce Protocol MCP
 
-> ## 🧱 Part of the MEOK A2A Substrate
->
-> All 12 A2A primitives + Stripe ACP bridge as one signed pipeline for
-> **£499/mo**. See [meok.ai/a2a](https://meok.ai/a2a).
+[![MEOK AI Labs](https://img.shields.io/badge/MEOK-AI%20Labs-667eea)](https://meok.ai)
+[![EU AI Act](https://img.shields.io/badge/EU%20AI%20Act-Compliant-22c55e)](https://councilof.ai)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![PyPI](https://img.shields.io/badge/PyPI-Install-3775a9)](https://pypi.org/project/agent_commerce_protocol_mcp/)
 
-# Bridges Stripe ACP + Google AP2 + Coinbase x402
+>   🧱 Part of the MEOK A2A Substrate
 
-<!-- mcp-name: io.github.CSOAI-ORG/agent-commerce-protocol-mcp -->
+  🧱 Part of the MEOK A2A Substrate
 
-[![PyPI](https://img.shields.io/pypi/v/agent-commerce-protocol-mcp)](https://pypi.org/project/agent-commerce-protocol-mcp/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![MCP Registry](https://img.shields.io/badge/MCP_Registry-Published-green)](https://registry.modelcontextprotocol.io)
+---
 
-## The "ACP" name collision
-
-There are two protocols called "ACP" — they do different things:
-
-| | IBM ACP | **Stripe ACP** |
-|---|---|---|
-| **Full name** | Agent Communication Protocol | Agentic Commerce Protocol |
-| **Owner** | IBM Research (was) | Stripe + OpenAI |
-| **Status** | Merged into A2A under Linux Foundation Sept 2025 | LIVE — Apache 2.0 |
-| **What it does** | Agent-to-agent messaging | In-conversation payments |
-| **Where you hit it** | A2A protocol stack | ChatGPT merchant flows |
-| **MEOK coverage** | A2A Substrate (12 MCPs) | **THIS MCP** |
-
-This MCP is **the Stripe ACP one** — agent payments inside ChatGPT-style flows.
-
-## What this gives you
-
-The **only MCP that bridges all 3 live agent-payment protocols**:
-
-- **Stripe ACP** — primary, for ChatGPT merchant flows
-- **Google AP2** — bridged, for the 60-org Mastercard/PayPal/Adyen coalition
-- **Coinbase x402** — bridged, for HTTP-402 pay-per-call without a Stripe account
-
-Plus EU compliance overlays automatically applied to every transaction: **PSD2** (EU), **MiCA** (EU crypto), **6AMLD** (EU AML), **FinCEN BSA** (US).
-
-Every payment intent + verification signs into the MEOK audit chain at `verify.meok.ai`.
-
-## Tools
-
-| Tool | Purpose |
-|---|---|
-| `discover_acp_merchants(category?)` | List Stripe-ACP-compatible merchants |
-| `prepare_payment_intent(merchant_id, items, currency)` | Build Stripe ACP intent |
-| `sign_payment_intent(intent)` | HMAC-sign + chain into audit log |
-| `verify_acp_response(response, expected_intent_id?)` | Verify merchant attestation |
-| `bridge_to_ap2_mandate(intent, user_consent_jwt?)` | Convert to Google AP2 mandate |
-| `bridge_to_x402_paywall(intent)` | Convert to Coinbase HTTP 402 |
-| `list_supported_protocols()` | Capability discovery |
-
-## Quick install
+## 🚀 Quick Start
 
 ```bash
-uvx agent-commerce-protocol-mcp
-pip install agent-commerce-protocol-mcp
-npx @meok-ai/agent-commerce-protocol-mcp
+# Install via pip
+pip install agent_commerce_protocol_mcp
+
+# Or install via Smithery
+npx -y @smithery/cli@latest install agent-commerce-protocol-mcp --client claude
 ```
 
-Claude Desktop / Cursor / Windsurf MCP config:
+## ✨ Features
 
-```json
-{
-  "mcpServers": {
-    "agent-commerce-protocol": {
-      "command": "uvx",
-      "args": ["agent-commerce-protocol-mcp"]
-    }
-  }
-}
-```
+- Product catalog management
+- Cart & checkout
+- Stripe integration
+- x402 protocol support
+- Multi-currency
 
-## Why this matters for £-revenue
+## 📖 Documentation
 
-Stripe ACP is the protocol Stripe + OpenAI are pushing through ChatGPT's shopping interface. Every ChatGPT merchant gets Stripe ACP free with their OpenAI integration. If your agent participates in ChatGPT commerce (or any merchant flow built on Stripe Connect ACP), you need this MCP to:
+- [Full Documentation](https://docs.meok.ai/agent-commerce-protocol-mcp)
+- [API Reference](https://api.meok.ai)
+- [EU AI Act Compliance Guide](https://councilof.ai/compliance)
 
-1. **Initiate signed payment intents** with audit-trail evidence for EU AI Act Article 12 + DORA Article 17
-2. **Bridge to AP2 mandates** if the merchant runs on Mastercard/PayPal/Adyen rails instead of pure Stripe
-3. **Bridge to x402** if your agent settles micropayments on-chain (Base / Polygon / Solana / Lightning)
+## 🛡️ Compliance
 
-## Sister MCPs
+This MCP server is built with **EU AI Act compliance** built-in:
 
-Part of the MEOK **A2A** pack:
+- ✅ Article 9 — Risk Management System
+- ✅ Article 13 — Transparency & Instructions for Use
+- ✅ Article 15 — Bias Detection & Testing
+- ✅ Article 26 — FRIA Support (where applicable)
+- ✅ Article 50 — AI Content Watermarking (where applicable)
 
-- **agent-commerce-payments-mcp** → invoicing + escrow + AML/KYC
-- **agent-prompt-injection-firewall-mcp** → scan payment prompts for injection
-- **agent-policy-enforcement-mcp** → gate which agents can spend
-- **agent-rate-limiter-mcp** → cap call volume per session
-- **agent-audit-logger-mcp** → hash-chained log of every payment intent
-- **agent-identity-trust-mcp** → buyer DID resolution
+Need help getting compliant? **[Book a free 15-min diagnostic →](https://cal.com/csoai/august-audit)**
 
-Full catalogue: [meok.ai/anthropic-registry](https://meok.ai/anthropic-registry)
+## 🏢 Enterprise
 
-## Protocol coverage + Universal PAYG
+Need custom development, SLA guarantees, or white-label deployment?
 
-| Option | Price | Best for |
-|---|---|---|
-| Self-host (this MCP) | £0 — MIT | Devs |
-| This MCP Starter | £29/mo | One-MCP teams |
-| Universal PAYG | £29/mo + £0.0002/call | Spiky usage |
-| A2A Substrate | £499/mo | All 13 A2A MCPs |
-| Universe | £1,499/mo | All 48 MEOK MCPs |
+- **Pro:** $99/mo — Full MCP suite + EU AI Act tracking
+- **Enterprise:** $499/mo — Custom dev + SLA + Dedicated support
 
-Buy: https://meok.ai/a2a
+[View Pricing →](https://councilof.ai/pricing) | [Contact Sales →](mailto:sales@csoai.org)
 
-## Licence
+## 🤝 Part of the MEOK Ecosystem
 
-MIT. By [MEOK AI Labs](https://meok.ai) (CSOAI LTD, UK Companies House 16939677). Founder: [Nicholas Templeman](mailto:nicholas@meok.ai).
+This server is part of the **[MEOK AI Labs](https://meok.ai)** ecosystem — 300+ MCP servers for sovereign AI governance.
+
+| Domain | Purpose |
+|--------|---------|
+| [councilof.ai](https://councilof.ai) | EU AI Act compliance marketplace |
+| [safetyof.ai](https://safetyof.ai) | AI safety & monitoring |
+| [meok.ai](https://meok.ai) | Sovereign AI platform |
+| [cobolbridge.ai](https://cobolbridge.ai) | Legacy modernization |
+
+## 📜 License
+
+MIT © [CSOAI-ORG](https://github.com/CSOAI-ORG)
+
+---
+
+<p align="center">
+  <sub>Built with 💜 by <a href="https://meok.ai">MEOK AI Labs</a> · UK Companies House 16939677</sub>
+</p>
