@@ -1,0 +1,23 @@
+# agent-commerce-protocol-mcp
+
+> Agent Commerce Protocol MCP — bridges Stripe ACP + Google AP2 + Coinbase x402 for agent payments inside ChatGPT, AP2 coalition rails, and pay-per-call x402 flows. By MEOK AI Labs.
+
+MCP server by MEOK AI Labs. Framework: fastmcp. Transport: stdio.
+
+## Tools
+- discover_acp_merchants
+- prepare_payment_intent
+- sign_payment_intent
+- verify_acp_response
+- bridge_to_ap2_mandate
+- bridge_to_x402_paywall
+- list_supported_protocols
+
+## Install
+```
+pip install agent-commerce-protocol-mcp
+```
+
+## Links
+- PyPI: https://pypi.org/project/agent-commerce-protocol-mcp/
+- Docs: https://meok.ai

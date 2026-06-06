@@ -1,0 +1,34 @@
+{
+  "name": "agent-commerce-protocol-mcp",
+  "title": "Agent Commerce Protocol Mcp",
+  "description": "Agent Commerce Protocol MCP \u2014 bridges Stripe ACP + Google AP2 + Coinbase x402 for agent payments inside ChatGPT, AP2 coalition rails, and pay-per-call x402 flows. By MEOK AI Labs.",
+  "version": "1.0.3",
+  "homepage": "https://meok.ai",
+  "license": "MIT",
+  "transport": {
+    "type": "stdio"
+  },
+  "tools": [
+    {
+      "name": "discover_acp_merchants"
+    },
+    {
+      "name": "prepare_payment_intent"
+    },
+    {
+      "name": "sign_payment_intent"
+    },
+    {
+      "name": "verify_acp_response"
+    },
+    {
+      "name": "bridge_to_ap2_mandate"
+    },
+    {
+      "name": "bridge_to_x402_paywall"
+    },
+    {
+      "name": "list_supported_protocols"
+    }
+  ]
+}
