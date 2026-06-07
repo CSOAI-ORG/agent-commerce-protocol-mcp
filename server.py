@@ -42,7 +42,7 @@ PRICING
 -------
 Free MIT self-host · £29/mo Starter · £79/mo Pro · A2A Substrate £499/mo
 (https://meok.ai/a2a) · Universe £1,499/mo
-(https://buy.stripe.com/cNi9AV0xS8wy5g9aqI8k90u)
+(https://buy.stripe.com/5kQ6oJ0xS3ce8sl7ew8k91j)
 """
 
 from __future__ import annotations
