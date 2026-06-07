@@ -1,0 +1,25 @@
+{
+  "acpVersion": "0.1",
+  "agent": {
+    "name": "agent-commerce-protocol-mcp",
+    "description": "Agent Commerce Protocol MCP \u2014 bridges Stripe ACP + Google AP2 + Coinbase x402 for agent payments",
+    "version": "1.0.3",
+    "provider": "MEOK AI Labs",
+    "interfaces": [
+      {
+        "type": "mcp",
+        "transport": "stdio",
+        "package": "agent-commerce-protocol-mcp"
+      }
+    ],
+    "capabilities": [
+      "discover_acp_merchants",
+      "prepare_payment_intent",
+      "sign_payment_intent",
+      "verify_acp_response",
+      "bridge_to_ap2_mandate",
+      "bridge_to_x402_paywall",
+      "list_supported_protocols"
+    ]
+  }
+}

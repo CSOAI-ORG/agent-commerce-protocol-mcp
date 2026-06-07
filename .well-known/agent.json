@@ -1,0 +1,86 @@
+{
+  "name": "agent-commerce-protocol-mcp",
+  "description": "Agent Commerce Protocol MCP \u2014 bridges Stripe ACP + Google AP2 + Coinbase x402 for agent payments",
+  "url": "https://proofof.ai/scorecard/agent-commerce-protocol-mcp.html",
+  "version": "1.0.3",
+  "protocolVersion": "0.2.0",
+  "provider": {
+    "organization": "MEOK AI Labs",
+    "url": "https://meok.ai"
+  },
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false
+  },
+  "defaultInputModes": [
+    "text"
+  ],
+  "defaultOutputModes": [
+    "text"
+  ],
+  "skills": [
+    {
+      "id": "discover_acp_merchants",
+      "name": "Discover Acp Merchants",
+      "description": "discover_acp_merchants via agent-commerce-protocol-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "prepare_payment_intent",
+      "name": "Prepare Payment Intent",
+      "description": "prepare_payment_intent via agent-commerce-protocol-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "sign_payment_intent",
+      "name": "Sign Payment Intent",
+      "description": "sign_payment_intent via agent-commerce-protocol-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "verify_acp_response",
+      "name": "Verify Acp Response",
+      "description": "verify_acp_response via agent-commerce-protocol-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "bridge_to_ap2_mandate",
+      "name": "Bridge To Ap2 Mandate",
+      "description": "bridge_to_ap2_mandate via agent-commerce-protocol-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "bridge_to_x402_paywall",
+      "name": "Bridge To X402 Paywall",
+      "description": "bridge_to_x402_paywall via agent-commerce-protocol-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    },
+    {
+      "id": "list_supported_protocols",
+      "name": "List Supported Protocols",
+      "description": "list_supported_protocols via agent-commerce-protocol-mcp",
+      "tags": [
+        "mcp",
+        "compliance"
+      ]
+    }
+  ]
+}
