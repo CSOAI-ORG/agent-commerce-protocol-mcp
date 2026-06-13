@@ -1,0 +1,144 @@
+{
+  "name": "Agent Commerce Protocol Mcp",
+  "version": "1.0.3",
+  "url": "https://mcp.meok.ai/agent-commerce-protocol-mcp/a2a",
+  "capabilities": {
+    "streaming": false,
+    "pushNotifications": false,
+    "stateTransitionHistory": false
+  },
+  "protocolVersion": "0.3.0",
+  "description": "Agent Commerce Protocol MCP — bridges Stripe ACP + Google AP2 + Coinbase x402 for agent payments inside ChatGPT, AP2 coalition rails, and pay-per-call x402 flows. By MEOK AI Labs.",
+  "provider": {
+    "organization": "MEOK AI LABS",
+    "url": "https://meok.ai"
+  },
+  "defaultInputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "defaultOutputModes": [
+    "application/json",
+    "text/plain"
+  ],
+  "skills": [
+    {
+      "id": "discover_acp_merchants",
+      "name": "Discover Acp Merchants",
+      "description": "Discover Acp Merchants — a tool of the agent-commerce-protocol-mcp MCP.",
+      "tags": [
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "prepare_payment_intent",
+      "name": "Prepare Payment Intent",
+      "description": "Prepare Payment Intent — a tool of the agent-commerce-protocol-mcp MCP.",
+      "tags": [
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "sign_payment_intent",
+      "name": "Sign Payment Intent",
+      "description": "Sign Payment Intent — a tool of the agent-commerce-protocol-mcp MCP.",
+      "tags": [
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "verify_acp_response",
+      "name": "Verify Acp Response",
+      "description": "Verify Acp Response — a tool of the agent-commerce-protocol-mcp MCP.",
+      "tags": [
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "bridge_to_ap2_mandate",
+      "name": "Bridge To Ap2 Mandate",
+      "description": "Bridge To Ap2 Mandate — a tool of the agent-commerce-protocol-mcp MCP.",
+      "tags": [
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "bridge_to_x402_paywall",
+      "name": "Bridge To X402 Paywall",
+      "description": "Bridge To X402 Paywall — a tool of the agent-commerce-protocol-mcp MCP.",
+      "tags": [
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    },
+    {
+      "id": "list_supported_protocols",
+      "name": "List Supported Protocols",
+      "description": "List Supported Protocols — a tool of the agent-commerce-protocol-mcp MCP.",
+      "tags": [
+        "agent"
+      ],
+      "inputModes": [
+        "application/json",
+        "text/plain"
+      ],
+      "outputModes": [
+        "application/json",
+        "text/plain"
+      ]
+    }
+  ],
+  "documentationUrl": "https://meok.ai",
+  "x-meok": {
+    "mcp_name": "agent-commerce-protocol-mcp",
+    "verifier": "https://proofof.ai/verify",
+    "governed_by": "CSOAI 52-article charter"
+  }
+}
