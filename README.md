@@ -122,3 +122,8 @@ Once configured, ask your assistant, for example:
 - "Use `discover_acp_merchants` to …"
 - "Use `prepare_payment_intent` to …"
 - "Use `sign_payment_intent` to …"
+
+## See also
+
+MEOK compliance MCP fleet:
+[`agent-cost-allocator-mcp`](https://github.com/CSOAI-ORG/agent-cost-allocator-mcp), [`agent-identity-trust-mcp`](https://github.com/CSOAI-ORG/agent-identity-trust-mcp), [`agent-orchestrator-mcp`](https://github.com/CSOAI-ORG/agent-orchestrator-mcp), [`agent-replay-debugger-mcp`](https://github.com/CSOAI-ORG/agent-replay-debugger-mcp), [`agent-x402-paywall-mcp`](https://github.com/CSOAI-ORG/agent-x402-paywall-mcp)
