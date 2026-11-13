@@ -40,9 +40,8 @@ alongside DORA Art 17, NIS2 Art 23, EU AI Act Art 12 evidence.
 
 PRICING
 -------
-Free MIT self-host · £29/mo Starter · £79/mo Pro · A2A Substrate £499/mo
-(https://meok.ai/a2a) · Universe £1,499/mo
-(https://buy.stripe.com/aFa7sNcgAdQS0ZT1Uc8k91t)
+No subscriptions and no tiers: pay per delivered job. See https://meok.ai/pricing. Source is MIT, free to self-host.
+(https://meok.ai/pricing)
 """
 
 from __future__ import annotations
@@ -129,7 +128,7 @@ def discover_acp_merchants(category: Optional[str] = None) -> dict:
     return {
         "merchants": merchants,
         "stage": "free-tier-demo" if not _STRIPE_API_KEY else "live-via-stripe",
-        "hint": "Pro tier ($79/mo) queries the live Stripe Connect ACP merchant directory.",
+        "hint": "Pro tier queries the live Stripe Connect ACP merchant directory.",
     }
 
 
